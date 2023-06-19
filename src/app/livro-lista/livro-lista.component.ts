@@ -10,10 +10,12 @@ import { ControleLivrosService } from '../controle-livros.service';
   styleUrls: ['./livro-lista.component.css']
 })
 export class LivroListaComponent {
-  public editoras: Editora[] = [];
-  public livros: Livro[] = [];
+  public editoras: Editora[];
+  public livros: Livro[];
   
   constructor( private servEditora: ControleEditoraService, private servLivros: ControleLivrosService){
+    this.editoras = [];
+    this.livros = [];
   };
 
   ngOnInit():void {
